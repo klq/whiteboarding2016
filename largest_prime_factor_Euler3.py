@@ -8,7 +8,6 @@ See if you can optimize your solution. What is the complexity of your program?
 '''
 
 import time
-import math
 
 def euler3():
     n = 600851475143
@@ -18,9 +17,9 @@ def euler3():
             print str(i) + " is a factor"
             n = n/i
         i += 1
-            
+
     print str(n) + " is a factor"
-    return  n 
+    return  n
 
 start_time = time.time()
 euler3()
