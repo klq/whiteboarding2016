@@ -1,4 +1,6 @@
+# coding=utf-8
 # 1-30-2016
+
 '''
 For the two selections below, given in Python syntax to be available as `mmg` and `geb`, 
 make a three-word phrase entirely from words five letters or longer that occur in both selections.
@@ -72,15 +74,30 @@ displayed in a colony of ants."""
 
 from collections import defaultdict
 
-intersection_dict = defaultdict(int)
-
 #preprocessing to "clean-up "
-processed_geb = geb.strip(",").strip(":").strip('""').strip("''").replace(".", '').split()
-print processed_geb
-break
+def preprocess(s):
+    return s.lower().replace(",",'').replace(":", '').replace("'", '').replace('"','').replace(".", '').split()
 
-for i, word in enumerate(geb):
-    three_word_key = geb[i:i+2]
-    intersection_dict[three_word_key] += 1
+
+geb = preprocess(geb)
+mmg = preprocess(mmg)
+
+
+geb_set = set()
+mmg_set = set()
+
+for word in geb:
+    if len(word) >= 5 :
+        geb_set.add(word)
+
+for word in mmg:
+    if len(word) >= 5 :
+        mmg_set.add(word)
+
+print  (geb_set & mmg_set) # intersection of two sets
+
+
+
+
 
 
