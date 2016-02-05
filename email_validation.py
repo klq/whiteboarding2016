@@ -41,5 +41,27 @@ with open(sys.argv[1],'r') as f:
           print 'false'
 
 
-
+#Code eval test cases:
+'''
+Abc.example.com
+hfij#kjdfvkl
+very.common@example.com
+A@b@c@example.com
+niceandsimple@example.com
+this is not true
+b@domain.net
+disposable.style.email.with+156@example.com
+just"not"right@example.com
+<invalid>@foo.com
+a"b(c)d,e:f;g<h>i[j\k]l@example.com
+"very.unusual.@.unusual.com"@example.com
+a.little.lengthy.but.fine@dept.example.com
+this is"not\allowed@example.com
+b@d.net
+asterisk_domain@foo.*
+1@d.net
+bob123@alice123.com
+this\ still\"not\\allowed@example.com
+disposable.style.email.with+symbol@example.com
+'''
 
