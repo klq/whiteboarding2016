@@ -16,7 +16,7 @@ def j_longversion_as_we_were_working_it_out(*args):
     # Testing condition 4-6
     if set0 == set1:
         return float(1.0)
-    
+
     # Testing condition 7
     if intersect == set():
         return 0
